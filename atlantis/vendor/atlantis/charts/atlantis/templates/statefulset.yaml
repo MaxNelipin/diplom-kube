@@ -61,6 +61,11 @@ spec:
         secret:
           secretName: {{ .Values.ycSAkeys.secretName }}
       {{- end }}
+      {{- if .Values.awsSAkeys }}
+      - name: aws-sa-key
+        secret:
+          secretName: {{ .Values.awsSAkeys.secretName }}
+      {{- end }}
       {{- if .Values.tlsSecretName }}
       - name: tls
         secret:
@@ -397,6 +402,11 @@ spec:
           - name: yc-sa-key
             readOnly: true
             mountPath: /home/atlantis/.yckey
+          {{- end }}
+          {{- if .Values.awsSAkeys }}
+          - name: aws-sa-key
+            readOnly: true
+            mountPath: /home/atlantis/.aws
           {{- end }}
           - name: atlantis-data
             mountPath: /atlantis-data

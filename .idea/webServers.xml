@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1e9c569e-4f15-4104-90e5-de97d370ea39" name="123">
+        <fileTransfer rootFolder="/home/maxn/diplom/diplom-kube" accessType="SFTP" host="192.168.0.125" port="22" sshConfigId="0a7ede65-a993-405d-8016-3e44858079fb" sshConfig="maxn@192.168.0.125:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

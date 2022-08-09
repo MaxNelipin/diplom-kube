@@ -1,0 +1,11 @@
+{{- if .Values.terraformrc -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "atlantis.fullname" . }}-terraformrc
+  labels:
+{{- include "atlantis.labels" . | nindent 4 }}
+data:
+  .terraformrc: |
+{{ .Values.terraformrc | indent 4 }}
+{{- end -}}

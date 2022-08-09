@@ -1,0 +1,10 @@
+apiVersion: qbec.io/v1alpha1
+kind: App
+metadata:
+  name: atlantis
+spec:
+  environments:
+    stage:
+      defaultNamespace: stage
+      server: https://192.168.49.2:8443
+  vars: {}

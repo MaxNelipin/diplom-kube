@@ -6,5 +6,5 @@ spec:
   environments:
     stage:
       defaultNamespace: stage
-      server: https://192.168.49.2:8443
+      server: https://51.250.76.159
   vars: {}
